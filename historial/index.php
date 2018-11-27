@@ -1,7 +1,7 @@
 <?php
 
-include ("start.php");
-include ("controle/vSession.php");
+include ("../start.php");
+include ("../controle/vSession.php");
 
 //Valor para modiicar automicamente el menu lateral
 $atras = 0;
@@ -26,25 +26,25 @@ $activeClass= 0;
 <!-- Latest compiled and minified JavaScript -->
 <script src="../jscript/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="jscript/push.min.js"></script>
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="shortcut icon" href="favicon.ico"/>
-<link href="css/style_menu.css" rel="stylesheet" type="text/css" />
-<link href="css/dashboard.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="jscript/modernizr.custom.js"></script>
+<script type="text/javascript" src="../jscript/push.min.js"></script>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link href="../css/style_menu.css" rel="stylesheet" type="text/css" />
+<link href="../css/dashboard.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/component.css" />
+<script src="../jscript/modernizr.custom.js"></script>
 
 <title>Modulo</title>
 </head>
 <body>
     <?php 
-        include("include/menu_top.php");
+        include("../include/menu_top_interno.php");
     ?>
     <div class="container-fluid">
         <div class="row">
             
                 <?php
-                    include ("include/sidebar.php");
+                    include ("../include/sidebar.php");
                  ?>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

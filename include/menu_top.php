@@ -16,7 +16,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav navbar-right">
                         <li class=""><a href="/modulo.php">Inicio<span class="sr-only">(current)</span></a></li>
-                        <li class=""><a href="/">Historial<span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="/historial/index.php">Historial<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="/">Puntuación<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="usuario/perfil.php">Perfil<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="/logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
