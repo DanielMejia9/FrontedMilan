@@ -14,19 +14,21 @@ function quitar($mensaje)
 	return $mensaje;
 }
 
-	
+	$esp = " ";
 
 	
 	
 $password = md5(trim($_POST["password"]));
 $email = trim($_POST["email"]);
 
-$result = mysql_query('SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
+$link = mysqli_connect("localhost", "root", "","facturacion_milan");
+
+$result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
 
 	//Si la consulta a la tabla user no devuelve nada, verificamos la consulta a la tabla clientes
-	if($file = mysql_fetch_array($result)) {
+	if($file = mysqli_fetch_array($result)) {
 		if ($file["password"] == $password) {
-			$_SESSION["username"] =$row['nomb_clie'].$esp.$row['ape_clie'].$esp;
+			$_SESSION["username"] =$file['nomb_clie'].$esp.$file['ape_clie'].$esp;
 			/*$_SESSION["id"] =$row['cedula'];
 			$_SESSION["fecha"] = $row['fech_clie'];
 			$_SESSION["direccion"] = $row['dire_clie'];
@@ -48,7 +50,6 @@ $result = mysql_query('SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
 			</SCRIPT>
 		<?php	
 	}
-mysql_free_result($result);
-mysql_free_result($result2);
-mysql_close();
+mysqli_free_result($result);
+mysqli_close($link);
 ?>

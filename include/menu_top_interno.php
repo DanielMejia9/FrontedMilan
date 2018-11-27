@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../modulo.php"><img src="images/logo.png" width='150' height='45'/></a>
+        <a class="navbar-brand" href="../modulo.php"><img src="../images/logo.png" width='150' height='45'/></a>
       </div>
                 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,7 +18,7 @@
                         <li class=""><a href="/index.php">Inicio<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="/">Historial<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="/">Puntuación<span class="sr-only">(current)</span></a></li>
-                        <li class=""><a href="usuario/perfil.php">Perfil<span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="/usuario/perfil.php">Perfil<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="/logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
                           <!--<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $_SESSION["username"]; ?><span class="caret"></span></a>

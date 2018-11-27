@@ -56,7 +56,7 @@ ini_set('display_errors', '1');
 
 <body>
   <?php 
-    include("../include/menu_top.php");
+    include("../include/menu_top_interno.php");
   ?>
 
   <div class="container-fluid">
