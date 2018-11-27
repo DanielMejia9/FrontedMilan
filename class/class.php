@@ -150,7 +150,7 @@ class Cliente
 
         $sql = "UPDATE tb_regi_cli set nomb_clie = '$nombre', ape_clie = '$apellido', fech_clie ='$fecha', dire_clie = '$direccion', tele_clie = '$telefono', tele_clie_opci = '$telefono1' WHERE codi_clie = '$id_perfil'";
 
-        $reg = mysql_query($sql, Conectar::conecta());
+        $reg = mysqli_query(Conectar::conecta(),$sql);
         echo "<script type='text/javascript'>
 			alert('El registro ha sido modificado satisfactoriamente');
 			window.location='perfil.php';

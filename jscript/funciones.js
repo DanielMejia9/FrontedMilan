@@ -18,37 +18,14 @@ function validarUser(){
 	
 	function validaReg(){
 		
-		if(document.getElementById("nom_cliente").value==""){
+		if(document.getElementById("nombre").value==""){
 			alert("Debe escribir el nombre del cliente");
-			form_clie.nom_cliente.focus()
+			form_perfil.nombre.focus()
 		}
-		else if(document.getElementById("ape_cliente").value==""){
-			alert("Debe escribir la cédula");
-			form_clie.ape_cliente.focus()
-		}
-		else if(document.getElementById("cedula").value==""){
-			alert("Debe indicar la fecha");
-			form_clie.cedula.focus()
-		}
-		else if(document.getElementById("datepicker").value==""){
-			alert("Debe indicar la fecha");
-			form_clie.datepicker.focus()
-		}
-		else if(document.getElementById("dirEmp").value==""){
-			alert("Debe escribir la dirección");
-			form_clie.dirEmp.focus()
-		}
-		else if(document.getElementById("telEmpr").value==""){
-			alert("Debe indicar un número telefónico");
-			form_clie.telEmpr.focus()
-		}
-		else if(document.getElementById("password").value==""){
-			alert("Debe indicar si el cliente es contribuyente");
-			form_clie.password.focus()
-		}
+		
 		else{
 			//document.form_clie.action ="controle/modelo.php"
-			document.form_clie.submit();
+			document.form_perfil.submit();
 		}                       
 	}
 
