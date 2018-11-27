@@ -29,8 +29,8 @@ $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.
 	if($file = mysqli_fetch_array($result)) {
 		if ($file["password"] == $password) {
 			$_SESSION["username"] =$file['nomb_clie'].$esp.$file['ape_clie'].$esp;
-			/*$_SESSION["id"] =$row['cedula'];
-			$_SESSION["fecha"] = $row['fech_clie'];
+			$_SESSION["id"] =$file['cedula'];
+			/*$_SESSION["fecha"] = $row['fech_clie'];
 			$_SESSION["direccion"] = $row['dire_clie'];
 			$_SESSION["telefono1"] = $row['tele_clie'];
 			$_SESSION["telefono1"] = $row['tele_clie_opci'];*/

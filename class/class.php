@@ -46,7 +46,7 @@ class Cliente
 
     public function BuscarPerfil($id)
     {
-        $sql = "select * FROM tb_regi_cli where codi_clie = $id";
+        $sql = "select * FROM tb_regi_cli where cedula = $id";
         $res = mysqli_query(Conectar::conecta(),$sql);
         while ($reg = mysqli_fetch_assoc($res))
         {
@@ -145,10 +145,10 @@ class Cliente
     {
         if(!empty($clave)) {
             $password = md5($clave);
-            $up = "UPDATE tb_regi_clie SET password = '$password' WHERE codi_clie = '$id_perfil'";
+            $up = "UPDATE tb_regi_clie SET password = '$password' WHERE cedula = '$id_perfil'";
         }
 
-        $sql = "UPDATE tb_regi_cli set nomb_clie = '$nombre', ape_clie = '$apellido', fech_clie ='$fecha', dire_clie = '$direccion', tele_clie = '$telefono', tele_clie_opci = '$telefono1' WHERE codi_clie = '$id_perfil'";
+        $sql = "UPDATE tb_regi_cli set nomb_clie = '$nombre', ape_clie = '$apellido', fech_clie ='$fecha', dire_clie = '$direccion', tele_clie = '$telefono', tele_clie_opci = '$telefono1' WHERE cedula = '$id_perfil'";
 
         $reg = mysqli_query(Conectar::conecta(),$sql);
         echo "<script type='text/javascript'>
