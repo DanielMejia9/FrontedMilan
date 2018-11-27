@@ -1,5 +1,9 @@
 // JavaScript Documen
 
+function prueba() {
+	conlole.log("Bien");
+}
+
 function validarUser(){
 	if (document.getElementById("usuario").value =="")
 	{
