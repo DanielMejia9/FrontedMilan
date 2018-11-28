@@ -36,6 +36,7 @@ $activeClass= 0;
 <script src="../jscript/funciones.js"></script>
 
 <title>Modulo</title>
+
 </head>
 <body>
     <?php 
@@ -54,17 +55,10 @@ $activeClass= 0;
                 <div style="background:rgb(245, 245, 245); text-align:left; padding: 5px 0px 0px 10px; height:40px; border-bottom: 1px  #C0C0C0 solid;border-radius: 0px;">
                     <span style="color: #003E55; font-weight:bold;font-size:14pt;">Acceso Directos </span>
                 </div>-->
-                <div class="row placeholders" >
-                     <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=1911714162230175&autoLogAppEvents=1';
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-
-                        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" onclick="prueba()">Compartir</a></div>
+                <div class="row placeholders">
+                     <a href="javascript: void(0);"onclick="window.open('http://www.facebook.com/sharer.php?u=https://milanbc.com','popup', 'toolbar=0, status=0, width=650, height=450');">
+                        <img src="../images/facebook.png" alt="Compartir en Facebook" onclick="return ShareFacebook();" class="icon-social" />
+                    </a>
                 </div>
                 <div class="row placeholders">
                     

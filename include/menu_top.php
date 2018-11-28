@@ -20,14 +20,7 @@
                         <li class=""><a href="/">Puntuación<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="redes-sociales/index.php">Redes Sociales<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="usuario/perfil.php">Perfil<span class="sr-only">(current)</span></a></li>
-                        <li class=""><a href="/logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
-                          <!--<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $_SESSION["username"]; ?><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                  <li class=""><a href="/recibo/recibo.php?valor=0">Perfil <span class="sr-only">(current)</span></a></li>
-                                  <li class=""><a href="/logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
-                                </ul> 
-                          </li>-->   
+                        <li class=""><a href="../logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
                       </ul>
                     </div> <!--/.navbar-collapse -->
                   </div><!-- /.container-fluid -->

@@ -1,7 +1,20 @@
 // JavaScript Documen
 
-function prueba() {
-	conlole.log("Bien");
+function ShareFacebook() {
+  $.ajax({
+    type:'POST', //aqui puede ser igual get
+    url: '../redes-sociales/registrar-puntos.php',
+    data: { 
+    				posteo: '1',
+    				puntos:'8'
+    			},
+    success:function(data){
+      //lo que devuelve tu archivo mifuncion.php
+    },
+    error:function(data){
+      //lo que devuelve si falla tu archivo mifuncion.php
+    }
+  });
 }
 
 function validarUser(){
