@@ -714,3 +714,24 @@ form[role=login] {
     white-space: nowrap !important;
     margin: -6px 0px 0 0 !important;
 }
+
+ul.list-ico li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+    background: white;
+    padding: 2px;
+}
+
+ul.list-ico {
+    background: white;
+    padding: 2px;
+    height: 54px;
+}
+
+
+ul.list li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
