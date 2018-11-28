@@ -21,7 +21,7 @@ function quitar($mensaje)
 $password = md5(trim($_POST["password"]));
 $email = trim($_POST["email"]);
 
-$link = mysqli_connect("localhost", "root", "","facturacion_milan");
+$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
 
 $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
 
@@ -29,7 +29,7 @@ $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.
 	if($file = mysqli_fetch_array($result)) {
 		if ($file["password"] == $password) {
 			$_SESSION["username"] =$file['nomb_clie'].$esp.$file['ape_clie'].$esp;
-			$_SESSION["id"] =$file['cedula'];
+			$_SESSION["id"] =$file['codi_clie'];
 			/*$_SESSION["fecha"] = $row['fech_clie'];
 			$_SESSION["direccion"] = $row['dire_clie'];
 			$_SESSION["telefono1"] = $row['tele_clie'];
