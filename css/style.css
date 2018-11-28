@@ -86,7 +86,7 @@ table#Tabla {
 
 
 nav.navbar.navbar-default {
-    background: #333;
+    background: #2c2924;
     border: 0;
 }
 
@@ -725,7 +725,7 @@ ul.list-ico li {
 
 ul.list-ico {
     background: white;
-    padding: 2px;
+    padding: 5px 2px 2px 14px;
     height: 54px;
 }
 
@@ -734,4 +734,19 @@ ul.list li {
     float: left;
     list-style: none;
     margin: 5px;
+}
+
+img.disabled {
+    filter: grayscale(100%);
+}
+
+section#navegacion {
+    border: 1px solid #2c2924;
+}
+
+@media (min-width: 768px)
+{
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: 4px 0 0 95px;
+}
 }
