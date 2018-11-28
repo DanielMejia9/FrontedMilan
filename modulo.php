@@ -60,17 +60,32 @@ $activeClass= 0;
                                 
                 </div>
                 <div class="row placeholders">
-                    
+                    <div class="row">
+                        <div class="class="col-12">
+                            <h2>¿Como ganar puntos?</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="class="col-md-11">
+                            <p>
+                                Compartir en Facebook 
+                            </p>
+                        </div>
+                        <div class="class="col-md-1">
+                            1 puntos
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="class="col-md-11">
+                            <p>
+                                Compartir en Instagram
+                            </p>
+                        </div>
+                        <div class="class="col-md-1">
+                            1 puntos
+                        </div>
+                    </div>
                 </div>
-                <div class="row placeholders">
-                    
-                </div>
-                <div class="row placeholders">
-                   
-                </div>
-                <div class="row placeholders">
-                
-                </div>      
         </div>
     </div>
     </div>
