@@ -1,12 +1,10 @@
-<?php
-
-include ("../start.php");
-include ("../controle/vSession.php");
-
-//Valor para modiicar automicamente el menu lateral
-$atras = 0;
-$activeClass= 0;
+<?php 
+    include("../start.php");
+    include("../controle/vSession.php");
+    //Valor para modiicar automicamente el menu lateral
+    $atras = 1;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +12,23 @@ $activeClass= 0;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../jscript/jquery.dataTables.min.js"></script>
+<script src="../jscript/dataTables.bootstrap.min.js"></script>
+<script src="../jscript/bootstrap.min.js"></script>
+<script src="listar-historial.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="../jscript/push.min.js"></script>
 <link rel="stylesheet" href="../css/style.css"/>
-<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="shortcut icon" href="favicon.ico"/>
 <link href="../css/style_menu.css" rel="stylesheet" type="text/css" />
 <link href="../css/dashboard.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="../css/component.css" />
@@ -33,7 +38,7 @@ $activeClass= 0;
 </head>
 <body>
     <?php 
-        include("../include/menu_top_interno.php");
+        include("../include/menu_top.php");
     ?>
     <div class="container-fluid">
         <div class="row">
@@ -43,29 +48,36 @@ $activeClass= 0;
                  ?>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <div class="fondo">
-            <!--Div que contiene el tutilo de Acceso Directo
-                <div style="background:rgb(245, 245, 245); text-align:left; padding: 5px 0px 0px 10px; height:40px; border-bottom: 1px  #C0C0C0 solid;border-radius: 0px;">
-                    <span style="color: #003E55; font-weight:bold;font-size:14pt;">Acceso Directos </span>
-                </div>-->
-                <div class="row placeholders" >
-                                
+                <div class="fondo">
+                    <div class="row placeholders" >
+                                    
+                    </div>
+                    <div class="row placeholders">
+                        <div class="row">
+                            <div class="class="col-12">
+                                <h2>Historial de Consumo de Servicios en MilanBC</h2>
+                        </div>
+                    </div>
+                    <div class="row placeholders">
+                        <div class="row">
+                            <div class="class="col-12">
+                                <table class="table table-bordered table-striped" id="listar-historial">
+                                    <thead>
+                                        <tr>
+                                            <th>Código de Factura</th>
+                                            <th>Descripción</th>
+                                            <th>Servicio</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="row placeholders">
-                    
-                </div>
-                <div class="row placeholders">
-                    
-                </div>
-                <div class="row placeholders">
-                   
-                </div>
-                <div class="row placeholders">
-                
-                </div>      
+            </div>
         </div>
     </div>
-    </div>
- </div>   	
+
 </body>
 </html>
