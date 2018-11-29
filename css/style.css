@@ -65,7 +65,7 @@ table#Tabla {
     /* padding: 10px 20px;
     background: #c7c7c7;*/
     border-radius: 0px;
-    
+
 }
 
 .row {
@@ -110,10 +110,10 @@ li.dropdown.open a {
 }
 
 div#divBoton{
-    height: 50px; 
+    height: 50px;
     margin: 35px 0 0 0;
     }
-    
+
 .inputTxt
 {
 	width:100% !important;
@@ -194,9 +194,9 @@ td,tr{font-family: 'Open Sans', sans-serif; font-size:12px;}
 table{ font-family: 'Open Sans', sans-serif; font-size:12px;}
 table,td,RegClien {padding: 1px 4px 1px 3px;}
 th {
-    background: #428bca;
+    background: #2c2924;
     font-weight: bold;
-    color: white;
+    color: #cfaa65;
     text-align: center;
 }
 
@@ -239,9 +239,9 @@ input#btnFactu {width: 100px;margin: 10px;height: 30px;}
 width:100%;
 height:30px;
 margin:0px 0px 0px 0px;
-border-top: 0px solid Silver; 
-border-bottom: 0px solid Silver; 
-border-right : 0px solid Silver; 
+border-top: 0px solid Silver;
+border-bottom: 0px solid Silver;
+border-right : 0px solid Silver;
 border-left : 0px solid Silver;
 background: #000;/*#002*/
 color:white;
@@ -256,7 +256,7 @@ text-align:left;
     clear: left;
 	padding: 12px 0 0 50px;
 	}
-	
+
 #liDet {
     width: 100%;
     height: 20px;
@@ -265,16 +265,16 @@ text-align:left;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
     padding: 0px 0px 0px 10px;
 }
-	
+
 #imagen{
 height:600px;
 width:708px;
 border-bottom:#000 1px;
 margin:0px 0px 0px 0px;
 padding:0px 0px 0px 0px;
-border-top: 0px solid Silver; 
-border-bottom: 0px solid Silver; 
-border-right : 0px solid Silver; 
+border-top: 0px solid Silver;
+border-bottom: 0px solid Silver;
+border-right : 0px solid Silver;
 border-left : 0px solid Silver;
 background:url(../login.png) /*no-repeat*/;
 }
@@ -312,8 +312,8 @@ border: 1px solid #E0E1E2;
 border-bottom: 1px #ccc solid;
 border-left: 1px #ccc solid;
 border-right: 1px #ccc solid;
-	
-	
+
+
 	}
 
 
@@ -360,7 +360,7 @@ div#contenedor-cliente {background: rgba(255, 255, 255, 0.8);width: 95%;margin: 
 div#paginacion {/* float: left; */width: 900px;position: relative;/* clear: left; */}
 
 
-div#tilulos {clear: left;background:none;border: 0px silver solid;width: 93%;text-align: left;padding: 0px 0px 0px 28px;margin: 10px 0px 0px 0px;height:50px;font-size: 10pt;border-radius: 10px;color: #025A8D;}	
+div#tilulos {clear: left;background:none;border: 0px silver solid;width: 93%;text-align: left;padding: 0px 0px 0px 28px;margin: 10px 0px 0px 0px;height:50px;font-size: 10pt;border-radius: 10px;color: #025A8D;}
 div#botenes {float: right;width: 263px;height: 38px;margin: 2px 0px 0px 0px;}
 
 
@@ -369,9 +369,9 @@ input#buscaImagen {width: 150px;}
 
 .divFormulario{margin: 4px;font-size: 10pt;font-family: verdana; color:rgb(76, 76, 76)}
 	.divFormulario input[type="text"] {height: 17px;}
-	
-	
-	
+
+
+
 .ico_acceso{border:0px silver solid; border-radius:10px;height:180px; cursor:pointer;
 -webkit-transition: top 0.5s ease, right 0.5s ease, bottom 0.5s ease, left 0.5s ease, padding 0.5s ease, margin 0.5s ease, border-radius 0.5s ease;
 	-moz-transition: top 0.5s ease, right 0.5s ease, bottom 0.5s ease, left 0.5s ease, padding 0.5s ease, margin 0.5s ease, border-radius 0.5s ease;
@@ -432,9 +432,9 @@ height:560px;
 width:730px;
 margin:0px 0px 0px 250px;
 padding:0px 0px 0px 60px;
-border-top: 0px solid Silver; 
-border-bottom: 0px solid Silver; 
-border-right : 0px solid Silver; 
+border-top: 0px solid Silver;
+border-bottom: 0px solid Silver;
+border-right : 0px solid Silver;
 border-left : 0px solid Silver;
 background:url(imagen/fondo_calculo.png) no-repeat;
 border-radius :5px;
@@ -445,9 +445,9 @@ height:560px;
 width:730px;
 margin:0px 0px 0px 250px;
 padding:0px 0px 0px 60px;
-border-top: 0px solid Silver; 
-border-bottom: 0px solid Silver; 
-border-right : 0px solid Silver; 
+border-top: 0px solid Silver;
+border-bottom: 0px solid Silver;
+border-right : 0px solid Silver;
 border-left : 0px solid Silver;
 background:url(imagen/fondo_registro.png) no-repeat;
 border-radius :5px;
@@ -458,9 +458,9 @@ height:560px;
 width:730px;
 margin:0px 0px 0px 250px;
 padding:0px 0px 0px 60px;
-border-top: 0px solid Silver; 
-border-bottom: 0px solid Silver; 
-border-right : 0px solid Silver; 
+border-top: 0px solid Silver;
+border-bottom: 0px solid Silver;
+border-right : 0px solid Silver;
 border-left : 0px solid Silver;
 background:url(imagen/fondo_reporte.png) no-repeat;
 border-radius :5px;
@@ -492,21 +492,21 @@ border-radius :5px;
 .letraNegrita{
 	font-weight:bold;
 }
-	
+
 .letraNormal{
 	font-weight:100;
 	text-align:left;
 
 }
-	
+
 #fondoTabla{
 	margin:0px 0px 0px 250px;
 	position:absolute;
 	width:850px;
 	height:auto;
-	border-top: 1px solid Silver; 
-	border-bottom: 1px solid Silver; 
-	border-right : 1px solid Silver; 
+	border-top: 1px solid Silver;
+	border-bottom: 1px solid Silver;
+	border-right : 1px solid Silver;
 	border-left : 1px solid Silver;
 	border-radius: 5px;
 }
@@ -515,16 +515,16 @@ border-radius :5px;
 	text-align:left;
 	font-size:30px;
 	}
-	
+
 
 #cajaOpcion{
 	float:left;
 	height:50px;
 	width:250px;
-	border-top: 0px solid Silver; 
-	border-bottom: 0px solid Silver; 
-	border-right : 0px solid Silver; 
-	border-left : 0px solid Silver;	
+	border-top: 0px solid Silver;
+	border-bottom: 0px solid Silver;
+	border-right : 0px solid Silver;
+	border-left : 0px solid Silver;
 }
 
 .atrasAllado{
@@ -538,9 +538,9 @@ border-radius :5px;
 	position:absolute;
 	width:850px;
 	height:auto;
-	border-top: 1px solid Silver; 
-	border-bottom: 1px solid Silver; 
-	border-right : 1px solid Silver; 
+	border-top: 1px solid Silver;
+	border-bottom: 1px solid Silver;
+	border-right : 1px solid Silver;
 	border-left : 1px solid Silver;
 	border-radius: 5px;
 }
@@ -548,7 +548,7 @@ border-radius :5px;
 #fondoConsulta h3{
 	text-align:left;
 	font-size:30px;
-	
+
 }
 
 #cuerpo_interno{
@@ -567,24 +567,24 @@ border-radius :5px;
 	height:560px;
 }
 
-.tablaCalculo{ 
+.tablaCalculo{
 	width:800px;
 	border-radius:5px;
 	background: #EAEAEA;
 }
 
 .tablaCalculo input{
-	
+
 	text-align:right;
 	background: #EAEAEA;
 	border:0px;}
-	
+
 .colorTabla input{
 	background: #666;
 	border:0px;
 	color:#FFF
 	}
-	
+
 .colorInput input{
 	border:0px;
 }
@@ -616,15 +616,15 @@ padding:2px 20px 2px 20px;
 .txt_mod{
 	color:#999;
 	font-style:italic;
-	
-	
+
+
 	}
-	
-	
-	
 
 
-		
+
+
+
+
 		#form_clie > table.descFact {
 border-spacing: 0px;
 }
@@ -634,7 +634,7 @@ border-spacing: 0px;
 
 .progress-bar {
     color: #333;
-} 
+}
 
 /*
 Reference:
@@ -695,7 +695,7 @@ form[role=login] {
 	form[role=login] > div {
 		text-align: center;
 	}
-	
+
 .form-links {
 	text-align: center;
 	margin-top: 1em;
