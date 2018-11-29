@@ -6,6 +6,8 @@
 	$conectar = $conexion->conecta();;
   include("../controle/vSession.php");
 
+  $lista = "";
+
   $id_cliente = $_SESSION["id"];
 	$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
 	$query = mysqli_query($link ,"select * from tb_detalle_factura");
