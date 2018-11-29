@@ -61,13 +61,15 @@
                     <div class="row placeholders">
                         <div class="row">
                             <div class="class="col-12">
-                                <table class="table table-bordered table-striped" id="listar-historial">
+                                <table class="table table-bordered table-hover" id="listar-historial">
                                     <thead>
                                         <tr>
                                             <th>Código de Factura</th>
+                                            <th>Tipo de Consumo</th>
                                             <th>Descripción</th>
-                                            <th>Servicio</th>
                                             <th>Precio</th>
+                                            <th>Puntos Asignados</th>
+                                            <th>Fecha</th>
                                         </tr>
                                     </thead>
                                     <tbody></tbody>

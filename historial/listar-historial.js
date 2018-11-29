@@ -8,9 +8,11 @@ $(document).ready(function() {
 		},					
 		"columns": [
 			{ "data": "codigo" },
+			{ "data": "consumo" },
 			{ "data": "descripcion" },
-			{ "data": "producto" },
-			{ "data": "precio" }
+			{ "data": "precio" },
+			{ "data": "puntos" },
+			{ "data": "fecha" }
 			],
 		"oLanguage": {
             "sProcessing":     "Procesando...",
