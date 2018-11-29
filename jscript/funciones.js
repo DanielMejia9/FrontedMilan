@@ -5,7 +5,6 @@ function ShareFacebook() {
     type:'POST', //aqui puede ser igual get
     url: '../redes-sociales/registrar-puntos.php',
     data: { 
-    				posteo: '1',
     				puntos:'8'
     			},
     success:function(data){

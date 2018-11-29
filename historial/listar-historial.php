@@ -11,10 +11,8 @@
   $id_cliente = $_SESSION["id"];
 	$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
 
-	$query = mysqli_query($link ,"SELECT * 
-                                FROM tb_tipo_consumo
-																INNER JOIN tb_detalle_puntos
-                                ON tb_tipo_consumo.id = tb_detalle_puntos.id_consumo
+	$query = mysqli_query($link, "SELECT * 
+                                FROM tb_detalle_puntos
                                 INNER JOIN tb_factura
                                 ON tb_detalle_puntos.id_cliente = tb_factura.codi_clie
 																INNER JOIN tb_detalle_factura
@@ -26,7 +24,7 @@
   while ($row = mysqli_fetch_array($query)) {
     $lista.='{
     	"codigo":"'.$row['codi_factu'].'",
-    	"consumo":"'.$row['tipo_consumo'].'",
+    	"servicio":"'.$row['descripcion_producto'].'",
       "descripcion":"'.$row['descripcion'].'",
     	"precio":"'.$row['precio'].'",
       "puntos":"'.$row['puntos_asignados'].'",

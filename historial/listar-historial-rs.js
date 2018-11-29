@@ -1,17 +1,14 @@
 $(document).ready(function() {			   
-	$('#listar-historial').DataTable( {	
+	$('#listar-historial-rs').DataTable( {	
 		"bDeferRender": true,			
 		"sPaginationType": "full_numbers",
 		"ajax": {
-			"url": "listar-historial.php",
+			"url": "listar-historial-rs.php",
         	"type": "POST"
 		},					
 		"columns": [
-			{ "data": "codigo" },
-			{ "data": "servicio" },
-			{ "data": "descripcion" },
-			{ "data": "precio" },
 			{ "data": "puntos" },
+			{ "data": "actividad" },
 			{ "data": "fecha" }
 			],
 		"oLanguage": {

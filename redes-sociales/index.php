@@ -1,5 +1,4 @@
 <?php
-
 include ("../start.php");
 include ("../controle/vSession.php");
 
@@ -40,14 +39,14 @@ $activeClass= 0;
 </head>
 <body>
     <?php 
-        include("../include/menu_top_interno.php");
+        include("../include/menu_top.php");
     ?>
     <div class="container-fluid">
         <div class="row">
             
-                <?php
-                    include ("../include/sidebar.php");
-                 ?>
+            <?php
+                include ("../include/sidebar.php");
+            ?>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="fondo">

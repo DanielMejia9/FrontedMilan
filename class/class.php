@@ -46,7 +46,29 @@ class Cliente
 
     public function BuscarPerfil($id)
     {
-        $sql = "select * FROM tb_regi_cli where cedula = $id";
+        $sql = "select * FROM tb_regi_cli where codi_clie = $id";
+        $res = mysqli_query(Conectar::conecta(),$sql);
+        while ($reg = mysqli_fetch_assoc($res))
+        {
+            $this->datos[] = $reg;
+        }
+        return $this->datos;
+    }
+
+    public function PuntajeCategoria()
+    {
+        $sql = "select * FROM tb_categoria_puntaje";
+        $res = mysqli_query(Conectar::conecta(),$sql);
+        while ($reg = mysqli_fetch_assoc($res))
+        {
+            $this->datos[] = $reg;
+        }
+        return $this->datos;
+    }
+
+    public function ConsultaPuntos($id)
+    {
+        $sql = "select * FROM tb_puntaje_cliente where codi_cliente = $id";
         $res = mysqli_query(Conectar::conecta(),$sql);
         while ($reg = mysqli_fetch_assoc($res))
         {
@@ -80,7 +102,6 @@ class Cliente
         return $this->datos;
     }
 
-
     //
     public function listarExpediente($codiClie)
     {
@@ -108,7 +129,6 @@ class Cliente
         return $this->datos;
     }
 
-
     public function guardarExpediente($codi_clie, $titulo, $descripcion)
     {
 
@@ -122,10 +142,7 @@ class Cliente
 			alert('El registro ha sido añadido satisfactoriamente');
 			window.location='expediente.php?id=$id&codi_clie=$codi_clie';
 			</script>";
-    }
-    
-    
-    
+    }    
     
     public function updateExpediente($id, $titulo, $descripcion,$codi_clie)
     {   
