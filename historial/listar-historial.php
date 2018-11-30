@@ -9,7 +9,7 @@
   $lista = "";
 
   $id_cliente = $_SESSION["id"];
-	$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
+	$link = mysqli_connect("localhost", "factura_user", "Tsa5h34?", "facturacion_milan");
 
 	$query = mysqli_query($link, "SELECT * 
                                 FROM tb_detalle_puntos

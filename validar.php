@@ -1,7 +1,7 @@
  <?php
 /*include("start.php");
 require("conexion.php");*/
-require_once("class/class.php");
+//require_once("class/class.php");
 include("start.php");
 $conexion = new Conectar();
 $conectar = $conexion->conecta();
@@ -21,7 +21,7 @@ function quitar($mensaje)
 $password = md5(trim($_POST["password"]));
 $email = trim($_POST["email"]);
 
-$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
+$link = mysqli_connect("localhost", "factura_user", "Tsa5h34?", "facturacion_milan");
 
 $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
 
@@ -30,14 +30,10 @@ $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.
 		if ($file["password"] == $password) {
 			$_SESSION["username"] =$file['nomb_clie'].$esp.$file['ape_clie'].$esp;
 			$_SESSION["id"] =$file['codi_clie'];
-			/*$_SESSION["fecha"] = $row['fech_clie'];
-			$_SESSION["direccion"] = $row['dire_clie'];
-			$_SESSION["telefono1"] = $row['tele_clie'];
-			$_SESSION["telefono1"] = $row['tele_clie_opci'];*/
 			?>
-			<SCRIPT LANGUAGE="javascript">
-				location.href = "modulo.php";
-			</SCRIPT>
+				<SCRIPT LANGUAGE="javascript">
+					location.href = "modulo.php";
+				</SCRIPT>
 			<?php
 		}
 	}

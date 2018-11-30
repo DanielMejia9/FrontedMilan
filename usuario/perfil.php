@@ -56,80 +56,99 @@ ini_set('display_errors', '1');
 
 <body>
   <?php 
-    include("../include/menu_top_interno.php");
+    include("../include/menu_top.php");
   ?>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 main">
-          <div class="fondo">
-            <div style="background:rgb(245, 245, 245); text-align:left; padding: 5px 0px 0px 0px; height:40px; border-bottom: 1px  #C0C0C0 solid;border-radius: 0px;">
-              <span style="color: #333333; font-weight:bold;font-size:14pt;padding: 0 0 0 10px;">Datos del Cliente</span><br><br>
+      <?php
+        include ("../include/sidebar.php");
+      ?>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="fondo">
+
+          <div class="row placeholders" ></div>
+
+          <div class="row placeholders">
+            <div class="row">
+              <div class="col-12">
+                <div style="background:rgb(245, 245, 245); text-align:left; padding: 5px 0px 0px 0px; height:40px; border-bottom: 1px  #C0C0C0 solid;border-radius: 0px;">
+                  <span style="color: #333333; font-weight:bold;font-size:14pt;padding: 0 0 0 10px;">Datos del Cliente</span>
+                </div>
+              </div>
             </div>
-            <br><br>
-            <div class="row placeholders">
-              <form name="form_perfil" id="form_perfil" action="perfil.php" method="post">
-                <div class="row placeholders">
-                <div class="col-md-3">
-                  <label>Nombre del Cliente: </label>
-                  <input type="text" name="nombre" id="nombre"  maxlength="250" value="<?= $perfil[0]['nomb_clie'] ?>" size="50" class="form-control" />
-                </div>
-                <div class="col-md-3">
-                  <label>Apellido del Cliente: </label>
-                  <input type="text" name="apellido" id="apellido"  maxlength="250" value="<?= $perfil[0]['ape_clie'] ?>" size="50" class="form-control" />
-                </div>
-                <div class="col-md-3">
-                  <label>Cédula:</label>
-                  <input type="text" name="cedula" id="cedula" readonly size="10" value="<?= $perfil[0]['cedula'] ?>" class="form-control"/>
-                </div>
+          </div>            
+          
+          <br><br>
+          
+          <div class="row placeholders">
+            <div class="row">
+              <div class="col-12">
+                <form name="form_perfil" id="form_perfil" action="perfil.php" method="post">
+                  <div class="row placeholders">
                   <div class="col-md-3">
-                    <label>Fecha: </label>
-                    <input type="text" name="datepicker" id="datepicker" maxlength="10" size="6" value="<?= $perfil[0]['fech_clie'] ?>" class="demo form-control"/>
-                  </div>
-                </div>
-                <br /> 
-                <div class="row placeholders">
-                  <div class="col-md-12">
-                    <label>Dirección</label>
-                    <input type="text" name="direccion" id="direccion" maxlength="200" size="61" value="<?= $perfil[0]['dire_clie'] ?>" class="form-control"/>
-                  </div>
-                </div>  
-                <br />
-                <div class="row placeholders">
-                  <div class="col-md-6">
-                    <label>Telefonos:</label>
-                    <input type="text" name="telefono"  id="telefono" maxlength="14" size="10" value="<?= $perfil[0]['tele_clie'] ?>" class="form-control"/>
-                  </div>
-                  <div class="col-md-6">
-                    <label>Telefonos(opcional):</label>
-                    <input type="text" name="telefono1" id="telefono1" maxlength="14" size="10" value="<?= $perfil[0]['tele_clie_opci'] ?>" class="form-control"/>
-                  </div>
-                </div>
-                <br />
-                <div class="row placeholders">
-                  <div class="col-md-6">
-                    <label>Correo electronico:</label>
-                    <input type="email" name="email"  id="email" size="10" readonly value="<?= $perfil[0]['email'] ?>" class="form-control"/>
-                  </div>
-                  <div class="col-md-6">
-                    <label>Contraseña:</label>
-                    <input type="text" name="password"  id="password" maxlength="14" size="10" class="form-control"/>
-                  </div>
-                </div> 
-                <br />
-                <div class="row placeholders">
-                  <div class="col-md-3 col-md-offset-3">
-                    <input  type="hidden" name="guardar" id="guardar"  value="si" />
-                    <a class="btn btn-primary" name="volver" onclick="window.location='perfil.php'"/>Volver</a>
+                    <label>Nombre del Cliente: </label>
+                    <input type="text" name="nombre" id="nombre"  maxlength="250" value="<?= $perfil[0]['nomb_clie'] ?>" size="50" class="form-control" />
                   </div>
                   <div class="col-md-3">
-                    <a class="btn btn-primary" name="username" onclick="validaReg();"/>Actualizar perfil</a>
+                    <label>Apellido del Cliente: </label>
+                    <input type="text" name="apellido" id="apellido"  maxlength="250" value="<?= $perfil[0]['ape_clie'] ?>" size="50" class="form-control" />
                   </div>
-                </div>
-              </form>
+                  <div class="col-md-3">
+                    <label>Cédula:</label>
+                    <input type="text" name="cedula" id="cedula" readonly size="10" value="<?= $perfil[0]['cedula'] ?>" class="form-control"/>
+                  </div>
+                    <div class="col-md-3">
+                      <label>Fecha: </label>
+                      <input type="text" name="datepicker" id="datepicker" maxlength="10" size="6" value="<?= $perfil[0]['fech_clie'] ?>" class="demo form-control"/>
+                    </div>
+                  </div>
+                  <br /> 
+                  <div class="row placeholders">
+                    <div class="col-md-12">
+                      <label>Dirección</label>
+                      <input type="text" name="direccion" id="direccion" maxlength="200" size="61" value="<?= $perfil[0]['dire_clie'] ?>" class="form-control"/>
+                    </div>
+                  </div>  
+                  <br />
+                  <div class="row placeholders">
+                    <div class="col-md-6">
+                      <label>Telefonos:</label>
+                      <input type="text" name="telefono"  id="telefono" maxlength="14" size="10" value="<?= $perfil[0]['tele_clie'] ?>" class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Telefonos(opcional):</label>
+                      <input type="text" name="telefono1" id="telefono1" maxlength="14" size="10" value="<?= $perfil[0]['tele_clie_opci'] ?>" class="form-control"/>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row placeholders">
+                    <div class="col-md-6">
+                      <label>Correo electronico:</label>
+                      <input type="email" name="email"  id="email" size="10" readonly value="<?= $perfil[0]['email'] ?>" class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Contraseña:</label>
+                      <input type="text" name="password"  id="password" maxlength="14" size="10" class="form-control"/>
+                    </div>
+                  </div> 
+                  <br />
+                  <div class="row placeholders">
+                    <div class="col-md-3 col-md-offset-3">
+                      <input  type="hidden" name="guardar" id="guardar"  value="si" />
+                      <a class="btn btn-primary" name="volver" onclick="window.location='perfil.php'"/>Volver</a>
+                    </div>
+                    <div class="col-md-3">
+                      <a class="btn btn-primary" name="username" onclick="validaReg();"/>Actualizar perfil</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
+
         </div>
+      </div>
     </div>
    </div>   	
 </body>

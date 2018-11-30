@@ -1,7 +1,10 @@
 <?php
+ error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
-include ("start.php");
-include ("controle/vSession.php");
+  include("start.php");
+  include("controle/vSession.php");
+  require_once("class/class.php");
 
 //Valor para modiicar automicamente el menu lateral
 $atras = 0;
@@ -46,7 +49,7 @@ $activeClass= 0;
     <div class="container-fluid">
         <div class="row">
             <?php
-                include ("include/sidebar.php");
+                include ("./include/sidebar.php");
             ?>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

@@ -1,5 +1,5 @@
 <?php 
-  require_once("../class/class.php");
+  //require_once("../class/class.php");
 
   $conecta = new Conectar();
   $con =  $conecta->conecta();

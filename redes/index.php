@@ -43,37 +43,23 @@ $activeClass= 0;
     ?>
     <div class="container-fluid">
         <div class="row">
-            
             <?php
                 include ("../include/sidebar.php");
             ?>
-
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <div class="fondo">
-            <!--Div que contiene el tutilo de Acceso Directo
-                <div style="background:rgb(245, 245, 245); text-align:left; padding: 5px 0px 0px 10px; height:40px; border-bottom: 1px  #C0C0C0 solid;border-radius: 0px;">
-                    <span style="color: #003E55; font-weight:bold;font-size:14pt;">Acceso Directos </span>
-                </div>-->
-                <div class="row placeholders">
-                     <a href="javascript: void(0);"onclick="window.open('http://www.facebook.com/sharer.php?u=https://milanbc.com','popup', 'toolbar=0, status=0, width=650, height=450');">
-                        <img src="../images/facebook.png" alt="Compartir en Facebook" onclick="return ShareFacebook();" class="icon-social" />
-                    </a>
+                <div class="fondo">
+                    <div class="row placeholders">
+                         <a href="javascript: void(0);"onclick="window.open('http://www.facebook.com/sharer.php?u=https://milanbc.com','popup', 'toolbar=0, status=0, width=650, height=450');">
+                            <img src="../images/facebook.png" alt="Compartir en Facebook" onclick="return ShareFacebook();" class="icon-social" />
+                        </a>
+                    </div>
                 </div>
-                <div class="row placeholders">
-                    
-                </div>
-                <div class="row placeholders">
-                    
-                </div>
-                <div class="row placeholders">
-                   
-                </div>
-                <div class="row placeholders">
-                
-                </div>      
+                <div class="row placeholders"></div>
+                <div class="row placeholders"></div>
+                <div class="row placeholders"></div>
+                <div class="row placeholders"></div>      
+            </div>
         </div>
     </div>
-    </div>
- </div>   	
 </body>
 </html>
