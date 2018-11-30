@@ -46,7 +46,7 @@ $activeClass= 0;
             <?php
                 include ("../include/sidebar.php");
             ?>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
                 <div class="fondo">
                     <div class="row placeholders">
                          <a href="javascript: void(0);"onclick="window.open('http://www.facebook.com/sharer.php?u=https://milanbc.com','popup', 'toolbar=0, status=0, width=650, height=450');">

@@ -21,8 +21,8 @@ function quitar($mensaje)
 $password = md5(trim($_POST["password"]));
 $email = trim($_POST["email"]);
 
-$link = mysqli_connect("localhost", "factura_user", "Tsa5h34?", "facturacion_milan");
-
+//$link = mysqli_connect("localhost", "factura_user", "Tsa5h34?", "facturacion_milan");
+$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
 $result = mysqli_query($link, 'SELECT * FROM tb_regi_cli WHERE email=\''.$email.'\'');
 
 	//Si la consulta a la tabla user no devuelve nada, verificamos la consulta a la tabla clientes
