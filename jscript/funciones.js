@@ -3,7 +3,7 @@
 function ShareFacebook() {
   $.ajax({
     type:'POST', //aqui puede ser igual get
-    url: '../redes-sociales/registrar-puntos.php',
+    url: '../redes/registrar-puntos.php',
     data: { 
     				puntos:'8'
     			},

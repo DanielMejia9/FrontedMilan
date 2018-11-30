@@ -39,6 +39,7 @@ $activeClass= 0;
 <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 <script src="jscript/modernizr.custom.js"></script>
+<script src="jscript/funciones.js"></script>
 
 <title>Modulo</title>
 </head>
@@ -64,27 +65,28 @@ $activeClass= 0;
                 <div class="row placeholders">
                     <div class="row">
                         <div class="class="col-12">
-                            <h2>¿Como ganar puntos?</h2>
+                            <h2>Condiciones y Restricciones</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="class="col-md-11">
                             <p>
-                                Compartir en Facebook 
+                               Para redimir los puntos el Socio de Milán B&C debe seguirnos en Facebook, e Instagram, etiquetar a 8 personas más en cada red social y llenar el formulario que se encuentra en www.milanbc.com . Los servicios del Plan de Puntos se realizarán de Lunes a Jueves de 9 AM a 1 PM, por cada servicio hasta el 50% del valor total podrá ser pagado con puntos. Bono por referidos. Por cada referido se sumaran 8 puntos a la cuenta del Socio de Milán B&C.
                             </p>
                         </div>
-                        <div class="class="col-md-1">
-                            1 puntos
+                    </div>
+                </div>
+                <div class="row placeholders">
+                    <div class="row">
+                        <div class="class="col-12">
+                            <h2>Condiciones del Plan de Puntos</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="class="col-md-11">
                             <p>
-                                Compartir en Instagram
+                               El afiliado debería tener acceso a su historial, fotos antes y después de procedimientos, ofertas y promociones especiales, agendamiento de citas Deben estar cruzadas la información de facturación con la acumulación de puntos en cada cuenta, el colaborador que realizó el servicio o recomendó el producto
                             </p>
-                        </div>
-                        <div class="class="col-md-1">
-                            1 puntos
                         </div>
                     </div>
                 </div>

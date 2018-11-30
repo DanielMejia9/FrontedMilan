@@ -7,7 +7,7 @@ class Conectar
         //Hacemos la conexion a la BD e ingresamos el nombre de servidor
         //el usuario  y su clave
         //$con = mysql_connect("localhost", "factura_user", "Tsa5h34?");
-        $con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
+        $con = mysqli_connect("localhost", "root", "","facturacion_milan");
         
 
         //Le deciamos que tipo de cotejamiento será utilizado

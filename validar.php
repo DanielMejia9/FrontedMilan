@@ -1,7 +1,7 @@
  <?php
 /*include("start.php");
 require("conexion.php");*/
-//require_once("class/class.php");
+require_once("class/class.php");
 include("start.php");
 $conexion = new Conectar();
 $conectar = $conexion->conecta();

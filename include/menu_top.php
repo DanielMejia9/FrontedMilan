@@ -25,7 +25,7 @@
                         </li>   
                         <li class=""></li>
                         <!--li class=""><a href="/">Puntuación<span class="sr-only">(current)</span></a></li-->
-                        <li class=""><a href="../redes/index.php">Redes Sociales<span class="sr-only">(current)</span></a></li>
+                        <!--li class=""><a href="../redes/index.php">Redes Sociales<span class="sr-only">(current)</span></a></li-->
                         <li class=""><a href="../usuario/perfil.php">Perfil<span class="sr-only">(current)</span></a></li>
                         <li class=""><a href="../logout.php">Cerrar sesión <span class="sr-only">(current)</span></a></li>
                       </ul>
