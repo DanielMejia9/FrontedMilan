@@ -9,6 +9,12 @@
   $puntos = $clie->ConsultaPuntos($id_cliente);
 
   $puntos = $clie->PuntajeCategoria();
+  if(isset($puntos[0]['puntaje_cliente'])) {
+  	$puntaje_acumulado = $puntos[0]['puntaje_cliente'];
+  }
+  else {
+  	$puntaje_acumulado = 0;
+  }
 ?>
 <div class="col-sm-3 col-md-3 sidebar">
 <div class="row">
@@ -22,7 +28,7 @@
 		<center>	
 			<ul class="list-ico">
 				<?php 
-					if ($puntos[0]['puntaje_cliente'] <= 5) { ?>
+					if ($puntaje_acumulado <= 5) { ?>
 						<li><img src="../images/iron.jpg" width="30" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -30,7 +36,7 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 10) { ?>
+					<?php } elseif($puntaje_acumulado <= 10) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -38,7 +44,7 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 15) { ?>
+					<?php } elseif($puntaje_acumulado <= 15) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" alt="Silver"></li>
@@ -46,7 +52,7 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 20) { ?>
+					<?php } elseif($puntaje_acumulado <= 20) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -54,7 +60,7 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 30) { ?>
+					<?php } elseif($puntaje_acumulado <= 30) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -62,7 +68,7 @@
 						<li><img src="../images/platinum.jpg" width="30" alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 50) { ?>
+					<?php } elseif($puntaje_acumulado <= 50) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -70,7 +76,7 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled" alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" alt="Diamond"></li>
 
-					<?php } elseif($puntos[0]['puntaje_cliente'] <= 50) { ?>
+					<?php } elseif($puntaje_acumulado <= 50) { ?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -86,7 +92,7 @@
 <br>
 <div class="row">
 	<ul class="list">
-		<li>Puntaje Acumulado: <?= $puntos[0]['puntaje_cliente'] ?> </li>
+		<li>Puntaje Acumulado: <?=  $puntaje_acumulado ?> </li>
 		<li>
 			Puntaje para el siguiente nivel: 
 		</li>

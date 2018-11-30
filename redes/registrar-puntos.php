@@ -36,5 +36,4 @@ $row_puntos_posteo = mysqli_num_rows($query);
   }
 
 
-
 ?>
