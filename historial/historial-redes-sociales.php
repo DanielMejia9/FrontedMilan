@@ -27,6 +27,7 @@
 <script src="../jscript/jquery.dataTables.min.js"></script>
 <script src="../jscript/dataTables.bootstrap.min.js"></script>
 <script src="../jscript/bootstrap.min.js"></script>
+<script src="../jscript/funciones.js"></script>
 <script src="listar-historial-rs.js"></script>
 
 

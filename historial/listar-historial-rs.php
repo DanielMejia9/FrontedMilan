@@ -1,19 +1,17 @@
 <?php
 	include("../start.php");
-	include("../class/class.php");
-
-  $conexion = new Conectar();
-	$conectar = $conexion->conecta();;
   include("../controle/vSession.php");
 
   $lista = "";
 
   $id_cliente = $_SESSION["id"];
-	$link = mysqli_connect("localhost", "root", "", "facturacion_milan");
+	$link = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
 
 	$query = mysqli_query($link, "SELECT * 
-                                FROM tb_puntos_posteo
-                                WHERE id_cliente = $id_cliente");
+                                FROM tb_actividad_posteo
+                                INNER JOIN tb_puntos_posteo
+                                ON tb_actividad_posteo.id = tb_puntos_posteo.id_actividad
+                                WHERE tb_puntos_posteo.id_cliente = $id_cliente");
 
   while ($row = mysqli_fetch_array($query)) {
     $lista.='{

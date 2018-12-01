@@ -7,10 +7,8 @@ $(document).ready(function() {
         	"type": "POST"
 		},					
 		"columns": [
-			{ "data": "codigo" },
+			{ "data": "categoria" },
 			{ "data": "servicio" },
-			{ "data": "descripcion" },
-			{ "data": "precio" },
 			{ "data": "puntos" },
 			{ "data": "fecha" }
 			],

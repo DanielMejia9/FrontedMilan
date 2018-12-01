@@ -4,31 +4,9 @@ class Conectar
 {
     public static function conecta()
     {
-        //Hacemos la conexion a la BD e ingresamos el nombre de servidor
-        //el usuario  y su clave
-        //$con = mysql_connect("localhost", "factura_user", "Tsa5h34?");
-        $con = mysqli_connect("localhost", "root", "","facturacion_milan");
-        
-
-        //Le deciamos que tipo de cotejamiento será utilizado
-        //mysql_query("SET NAMES 'utf8'");
-        //nos conectamos a la BD
-        //mysql_select_db('facturacion_milan');
-
+        //$con = mysqli_connect("localhost", "factura_user", "Tsa5h34?");
+        $con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
         return $con;
-
-
-        /*//Hacemos la conexion a la BD e ingresamos el nombre de servidor
-        //el usuario  y su clave
-        $con = mysql_connect("localhost","caracasw_usersaj","WO}EI3MZz@Xy");
-        //Le deciamos que tipo de cotejamiento será utilizado
-        mysql_query("SET NAMES 'utf8'");
-        //nos conectamos a la BD
-        mysql_select_db('caracasw_saj');
-
-        
-        return $con;
-        */
     }
 
 }
@@ -53,6 +31,22 @@ class Cliente
             $this->datos[] = $reg;
         }
         return $this->datos;
+    }
+
+    public function EditarPerfil($nombre, $apellido, $cedula, $fecha, $direccion, $telefono, $telefono1, $clave, $id_perfil)
+    {
+        $con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
+        if(!empty($clave)) {
+            $password = md5($clave);
+            $up = "UPDATE tb_regi_clie SET password = '$password' WHERE codi_clie = $id_perfil";
+        }
+        $sql = "UPDATE tb_regi_cli set nomb_clie = '$nombre', ape_clie = '$apellido', fech_clie ='$fecha', dire_clie = '$direccion', tele_clie = '$telefono', tele_clie_opci = '$telefono1' WHERE codi_clie = '$id_perfil'";
+        mysqli_query($con, $sql);
+
+        echo "<script type='text/javascript'>
+            alert('El registro ha sido modificado satisfactoriamente');
+            window.location='perfil.php';
+            </script>";
     }
 
     public function PuntajeCategoria()
@@ -157,24 +151,6 @@ class Cliente
 			</script>";
     }
     
-    //Editamos el Cliente que deseamos actualizar
-    public function EditarPerfil($nombre, $apellido, $cedula, $fecha, $direccion, $telefono, $telefono1, $clave, $id_perfil)
-    {
-        if(!empty($clave)) {
-            $password = md5($clave);
-            $up = "UPDATE tb_regi_clie SET password = '$password' WHERE cedula = '$id_perfil'";
-        }
-
-        $sql = "UPDATE tb_regi_cli set nomb_clie = '$nombre', ape_clie = '$apellido', fech_clie ='$fecha', dire_clie = '$direccion', tele_clie = '$telefono', tele_clie_opci = '$telefono1' WHERE cedula = '$id_perfil'";
-
-        $reg = mysqli_query(Conectar::conecta(),$sql);
-        echo "<script type='text/javascript'>
-			alert('El registro ha sido modificado satisfactoriamente');
-			window.location='perfil.php';
-			</script>";
-    }
-
-
     //Registramos los Clientes
     public function AnadirCliente($cedula, $nom_cliente, $ape_cliente, $fecha, $dire, $tele, $telepc, $email, $clave)
     {

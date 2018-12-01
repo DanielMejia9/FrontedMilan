@@ -14,7 +14,7 @@
         //	echo ("<a href='index.php' style='font-weight:bold; color:orange;'>Debe iniciar la session</a>");?>
             	<SCRIPT LANGUAGE="javascript">
                 alert("Debe iniciar sesion");
-				location.href = "index.php";
+				location.href = "../index.php";
 				</SCRIPT>
             
             <?php

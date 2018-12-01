@@ -7,6 +7,10 @@
 	height: 50px;
 }
 
+.content-instagram {
+	display: table-cell;
+  vertical-align: middle;
+}
 
 label.etiqueta {
     color: white;

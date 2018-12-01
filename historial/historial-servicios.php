@@ -27,6 +27,7 @@
 <script src="../jscript/jquery.dataTables.min.js"></script>
 <script src="../jscript/dataTables.bootstrap.min.js"></script>
 <script src="../jscript/bootstrap.min.js"></script>
+<script src="../jscript/funciones.js"></script>
 <script src="listar-historial.js"></script>
 
 
@@ -68,10 +69,8 @@
                                 <table class="table table-bordered table-hover" id="listar-historial">
                                     <thead>
                                         <tr>
-                                            <th>Código de Factura</th>
-                                            <th>Tipo de Consumo</th>
+                                            <th>Categoria del Servicio</th>
                                             <th>Descripción</th>
-                                            <th>Precio</th>
                                             <th>Puntos Asignados</th>
                                             <th>Fecha</th>
                                         </tr>

@@ -5,7 +5,25 @@ function ShareFacebook() {
     type:'POST', //aqui puede ser igual get
     url: '../redes/registrar-puntos.php',
     data: { 
-    				puntos:'8'
+    				puntos:'8',
+    				opcion: '1'
+    			},
+    success:function(data){
+      //lo que devuelve tu archivo mifuncion.php
+    },
+    error:function(data){
+      //lo que devuelve si falla tu archivo mifuncion.php
+    }
+  });
+}
+
+function FollowInstagram() {
+  $.ajax({
+    type:'POST', //aqui puede ser igual get
+    url: '../redes/registrar-puntos.php',
+    data: { 
+    				puntos:'8',
+    				opcion: '2'
     			},
     success:function(data){
       //lo que devuelve tu archivo mifuncion.php

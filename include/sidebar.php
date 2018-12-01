@@ -8,7 +8,7 @@
   $id_cliente = $_SESSION['id'];
   $puntos = $clie->ConsultaPuntos($id_cliente);
 
-  $puntos = $clie->PuntajeCategoria();
+  //$puntos = $clie->PuntajeCategoria();
   if(isset($puntos[0]['puntaje_cliente'])) {
   	$puntaje_acumulado = $puntos[0]['puntaje_cliente'];
   }
@@ -106,16 +106,20 @@
 </div>
 <div class="row">
 	<div class="col-12">
-		<center>	
-			<ul class="list">
+		<div class="content-instagram">	
+			<ul class="list" style="margin-left: 100px;">
 				<li>
 					<a href="javascript: void(0);"onclick="window.open('http://www.facebook.com/sharer.php?u=https://milanbc.com','popup', 'toolbar=0, status=0, width=650, height=450');">
-             <img src="../images/facebook_vintage.png" alt="Compartir en Facebook" onclick="return ShareFacebook();"  width="30" />
+             <img src="../images/facebook_vintage.png" alt="Siguenos en Facebook" title="Siguenos en Facebook" onclick="return ShareFacebook();"  width="30" />
           </a>
 				</li>
-				<li><img src="../images/instagram_vintage.png" width="30" ></li>
+				<li>
+					<a href="javascript: void(0);"onclick="window.open('https://www.instagram.com/milanbeautycare/','popup', 'toolbar=0, status=0, width=650, height=450');">
+             <img src="../images/instagram_vintage.png" alt="Siguenos en Instagram" title="Siguenos en Instagram" onclick="return FollowInstagram();" width="30" />
+          </a>
+        </li>
 			</ul>
-		</center>
+		</div>
 	</div>
 </div>
 
