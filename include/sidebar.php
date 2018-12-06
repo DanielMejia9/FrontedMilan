@@ -8,7 +8,6 @@
   $id_cliente = $_SESSION['id'];
   $puntos = $clie->ConsultaPuntos($id_cliente);
 
-  //$puntos = $clie->PuntajeCategoria();
   if(isset($puntos[0]['puntaje_cliente'])) {
   	$puntaje_acumulado = $puntos[0]['puntaje_cliente'];
   }
@@ -28,7 +27,14 @@
 		<center>	
 			<ul class="list-ico">
 				<?php 
-					if ($puntaje_acumulado <= 5) { ?>
+					if ($puntaje_acumulado <= 5) { 
+							$sigui_categoria = "Bronce";
+							$categoria = $clie->PuntajeCategoria($sigui_categoria);
+							$proxi_categoria = $categoria[0]['nombre_categoria'];
+							$puntaje_prox_cat = $categoria[0]['puntaje_categoria'];
+
+							$puntaje_sigui_cat = $puntaje_prox_cat - $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -36,7 +42,14 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 10) { ?>
+					<?php } elseif($puntaje_acumulado <= 10) { 
+							$sigui_categoria = "Silver";
+							$categoria = $clie->PuntajeCategoria($sigui_categoria);
+							$proxi_categoria = $categoria[0]['nombre_categoria'];
+							$puntaje_prox_cat = $categoria[0]['puntaje_categoria'];
+
+							$puntaje_sigui_cat = $puntaje_prox_cat - $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -44,7 +57,14 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 15) { ?>
+					<?php } elseif($puntaje_acumulado <= 15) { 
+							$sigui_categoria = "Gold";
+							$categoria = $clie->PuntajeCategoria($sigui_categoria);
+							$proxi_categoria = $categoria[0]['nombre_categoria'];
+							$puntaje_prox_cat = $categoria[0]['puntaje_categoria'];
+
+							$puntaje_sigui_cat = $puntaje_prox_cat - $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" alt="Silver"></li>
@@ -52,7 +72,14 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 20) { ?>
+					<?php } elseif($puntaje_acumulado <= 20) { 
+							$sigui_categoria = "Platinum";
+							$categoria = $clie->PuntajeCategoria($sigui_categoria);
+							$proxi_categoria = $categoria[0]['nombre_categoria'];
+							$puntaje_prox_cat = $categoria[0]['puntaje_categoria'];
+
+							$puntaje_sigui_cat = $puntaje_prox_cat - $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -60,7 +87,14 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled"  alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 30) { ?>
+					<?php } elseif($puntaje_acumulado <= 30) {
+							$sigui_categoria = "Diamond";
+							$categoria = $clie->PuntajeCategoria($sigui_categoria);
+							$proxi_categoria = $categoria[0]['nombre_categoria'];
+							$puntaje_prox_cat = $categoria[0]['puntaje_categoria'];
+
+							$puntaje_sigui_cat = $puntaje_prox_cat - $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -68,7 +102,10 @@
 						<li><img src="../images/platinum.jpg" width="30" alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" class="disabled" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 50) { ?>
+					<?php } elseif($puntaje_acumulado >= 50) { 
+							$proxi_categoria = "Diamond";
+							$puntaje_sigui_cat = $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30"  class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -76,7 +113,10 @@
 						<li><img src="../images/platinum.jpg" width="30" class="disabled" alt="Platinum"></li>
 						<li><img src="../images/diamond.jpg" width="30" alt="Diamond"></li>
 
-					<?php } elseif($puntaje_acumulado <= 50) { ?>
+					<?php } else { 
+							$proxi_categoria = "New";
+							$puntaje_sigui_cat = $puntaje_acumulado;
+						?>
 						<li><img src="../images/iron.jpg" width="30" class="disabled" alt="New"></li>
 						<li><img src="../images/bronce.jpg" width="30" class="disabled" alt="Bronce"></li>
 						<li><img src="../images/silver.jpg" width="30" class="disabled" alt="Silver"></li>
@@ -93,9 +133,7 @@
 <div class="row">
 	<ul class="list">
 		<li>Puntaje Acumulado: <?=  $puntaje_acumulado ?> </li>
-		<li>
-			Puntaje para el siguiente nivel: 
-		</li>
+		<li>Puntaje para el siguiente nivel: <?= $puntaje_sigui_cat.' ('.$proxi_categoria.')' ?></li>
 	</ul>
 </div>
 <br>

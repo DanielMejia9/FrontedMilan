@@ -8,12 +8,10 @@ class Conectar
         $con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
         return $con;
     }
-
 }
 
 class Cliente
 {
-
     private $datos;
 
     public function __construct()
@@ -49,15 +47,15 @@ class Cliente
             </script>";
     }
 
-    public function PuntajeCategoria()
+    public function PuntajeCategoria($nombre)
     {
-        $sql = "select * FROM tb_categoria_puntaje";
-        $res = mysqli_query(Conectar::conecta(),$sql);
-        while ($reg = mysqli_fetch_assoc($res))
+        $query = "select * FROM tb_categoria_puntaje WHERE nombre_categoria = '$nombre'";
+        $result = mysqli_query(Conectar::conecta(),$query);
+        while ($file = mysqli_fetch_assoc($result))
         {
-            $this->datos[] = $reg;
+            $this->date[] = $file;
         }
-        return $this->datos;
+        return $this->date;
     }
 
     public function ConsultaPuntos($id)
