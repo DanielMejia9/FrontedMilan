@@ -5,7 +5,8 @@ class Conectar
     public static function conecta()
     {
         //$con = mysqli_connect("localhost", "factura_user", "Tsa5h34?");
-        $con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
+        //$con = mysqli_connect("localhost", "factura_user", "Tsa5h34?","facturacion_milan");
+		$con = mysqli_connect("localhost", "root", "","facturacion_milan");
         return $con;
     }
 
